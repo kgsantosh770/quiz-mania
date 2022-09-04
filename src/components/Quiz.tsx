@@ -20,7 +20,6 @@ function Quiz() {
     }, [revealAnswers])
 
     const quizes = allQuiz.map((quiz: any, index: number) => {
-        console.log("dammaaal")
         return (
             <SingleQuiz
                 key={index}
