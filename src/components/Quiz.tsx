@@ -19,6 +19,11 @@ function Quiz() {
         }
     }, [revealAnswers])
 
+    function scrollPageToTop(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
     const quizes = allQuiz.map((quiz: any, index: number) => {
         return (
             <SingleQuiz
@@ -33,6 +38,7 @@ function Quiz() {
         if (revealAnswers){
             setRevealAnswers(false)
             setLoading(true)
+            scrollPageToTop()
         }
         else
             setRevealAnswers(true)
