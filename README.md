@@ -15,4 +15,4 @@ This project was is a simple quiz game created using React and Typescript as tem
 npm install
 npm start
 ```
-4. Once the server starts open [localhost:3000](https://localhost:3000)
+4. Once the server starts open [localhost:3000](http://localhost:3000)
