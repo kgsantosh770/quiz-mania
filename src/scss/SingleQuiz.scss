@@ -1,10 +1,10 @@
 .singlequiz-component {
-    padding: 26px 0;
+    padding: 26px 0 10px;
     border-bottom: 1px solid #dedbf0;
     .question {
         font-size: 26px;
         font-weight: bold;
-        line-height: 19px;
+        line-height: 29px;
         margin: 0;
     }
     .options {
@@ -21,12 +21,13 @@
             border: 1px solid #4d5b9e;
             background-color: white;
             font-size: 14px;
+            margin-bottom: 26px;
             cursor: pointer;
             &.selected {
                 background-color: #d6dbf5;
             }
-            &:not(:first-child) {
-                margin-left: 22px;
+            &:not(:last-child) {
+                margin-right: 22px;
             }
             &.green {
                 background-color: #94D7A2;
