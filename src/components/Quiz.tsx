@@ -8,27 +8,14 @@ function Quiz() {
     const [allQuiz, setAllQuiz] = useState(quizData)
     const [revealAnswers, setRevealAnswers] = useState(false)
 
-    useEffect(() => {
-        if(revealAnswers===false)
-            setAllQuiz(prevAllQuiz => prevAllQuiz.map((quiz: any) => ({ ...quiz, selectedOption: "none" })))
-    }, [revealAnswers])
-
     const quizes = allQuiz.map((quiz: any) => {
         return(
         <SingleQuiz
             key={quiz.id}
             quiz={quiz}
             revealAnswers={revealAnswers}
-            handleClick={optionClick}
         />
     )})
-
-    function optionClick(quizId: any, option: String) {
-        setAllQuiz(prevAllQuiz => prevAllQuiz.map((quiz: any) => {
-            console.log(quiz.id, quizId, option)
-            return quizId === quiz.id ? { ...quiz, selectedOption: option } : quiz
-        }))
-    }
 
     function checkAnswers() {
         if(revealAnswers)
