@@ -1,0 +1,40 @@
+.singlequiz-component {
+    padding: 26px 0;
+    border-bottom: 1px solid #dedbf0;
+    .question {
+        font-size: 26px;
+        font-weight: bold;
+        line-height: 19px;
+        margin: 0;
+    }
+    .options {
+        margin-top: 22px;
+        &.revealed {
+            pointer-events: none;
+            .option:not(.green){
+                opacity: 0.5;
+            }            
+        }
+        .option {
+            padding: 7px 21px;
+            border-radius: 8px;
+            border: 1px solid #4d5b9e;
+            background-color: white;
+            font-size: 14px;
+            cursor: pointer;
+            &.selected {
+                background-color: #d6dbf5;
+            }
+            &:not(:first-child) {
+                margin-left: 22px;
+            }
+            &.green {
+                background-color: #94D7A2;
+                font-weight: bold;
+            }
+            &.red {
+                background-color: #F8BCBC;
+            }
+        }
+    }
+}

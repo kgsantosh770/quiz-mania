@@ -1,0 +1,29 @@
+h1,h2,h3 {
+    margin: 0;
+}
+
+body {
+    margin: auto 0;
+}
+
+.app{
+    font-family: 'Karla';
+    font-style: normal;
+    color: #293264;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .blob{
+        position: absolute;
+        &.upper{
+            right: 0;
+            top: 0;
+        }
+        &.lower{
+            left: 0;
+            bottom: 0;
+            transform: rotate(180deg);
+        }
+    }
+}
