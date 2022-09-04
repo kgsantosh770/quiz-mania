@@ -41,7 +41,7 @@ function Quiz() {
 
     return (
         <div className='quiz-component'>
-            {loading ? <div>loading...</div> :
+            {loading ? <div className='loading'>loading...</div> :
                 <>
                     {quizes}
                     <button className="submit-quiz-btn" onClick={checkAnswers}>
