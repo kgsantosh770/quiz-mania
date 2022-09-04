@@ -44,9 +44,13 @@ function Quiz() {
             setRevealAnswers(true)
     }
 
+    const style = {
+        height: loading ? "calc(100vh - 65px)" : ""
+    }
+
     return (
-        <div className='quiz-component'>
-            {loading ? <div className='loading'>loading...</div> :
+        <div className='quiz-component' style={style}>
+            {loading ? <img className='loading' src="/loading-circles.gif"/> :
                 <>
                     {quizes}
                     <button className="submit-quiz-btn" onClick={checkAnswers}>
